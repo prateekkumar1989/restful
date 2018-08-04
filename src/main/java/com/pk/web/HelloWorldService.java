@@ -14,6 +14,12 @@ public class HelloWorldService {
 		String output = "Jersey says : " + msg;
 		return Response.status(200).entity(output).build();
 		//http://localhost:8080/rest/hello/pk
+		/*
+		 * For https
+		 * "%JAVA_HOME%"\bin\keytool -genkey -alias tomcat -keyalg RSA -keystore keystore.jks
+		 * Place keystore in /src/main/resources/
+		 * https://localhost:8443/rest/hello/pk
+		 */
 	}
  
 }
